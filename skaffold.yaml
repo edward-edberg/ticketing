@@ -21,3 +21,11 @@ build:
             src: "src/**/*.ts"
           - dest: "."
             src: "src/**/**/*.ts"
+    - image: edwardedberg/client
+      context: client
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - dest: "."
+            src: "**/*.js"
